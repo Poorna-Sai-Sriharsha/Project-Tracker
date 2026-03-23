@@ -9,7 +9,6 @@ A fully functional frontend application for project management featuring three s
 ```bash
 # Clone the repository
 git clone <repo-url>
-cd MVP
 
 # Install dependencies
 npm install
@@ -120,7 +119,7 @@ The application is heavily optimized for both Desktop and Mobile devices, achiev
 4. **Deferred Execution**: The simulated live collaboration interval is deferred by 1000ms via `setTimeout` to ensure the main thread is completely idle during the critical initial rendering path.
 5. **Font Preloading**: Critical Google Fonts are preloaded (`<link rel="preload">`) to guarantee earlier text rendering and improved First Contentful Paint (FCP).
 
-##  Hardest UI Problem (150–250 words)
+##  Hardest UI Problem 
 
 The hardest problem was implementing a robust custom drag-and-drop system that works across Kanban columns without any library assistance. The core challenge was reliable drop-zone detection during a drag operation: since the floating clone follows the cursor with `position: fixed` and `pointer-events: none`, the standard approach of relying on pointer events bubbling up to column elements doesn't work — the clone intercepts them.
 
